@@ -155,9 +155,9 @@ main { padding-top: var(--nav-h); }
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 2px;
-  margin: 0 -3rem 5rem;
+  margin-bottom: 5rem;
 }
-@media (max-width: 900px) { .folder-grid { margin: 0 -1.5rem 3rem; } }
+@media (max-width: 900px) { .folder-grid { margin-bottom: 3rem; } }
 
 .folder-card {
   position: relative; display: block; text-decoration: none;
@@ -349,8 +349,7 @@ footer {
 
 <div class="container">
   <div class="section-head"><h2>Collections</h2></div>
-</div>
-<div class="folder-grid">
+  <div class="folder-grid">
 <a href="/Available Works" class="folder-card">
   <img src="/images/Angry%20Mountain.png" alt="Available Works" loading="eager">
   <div class="folder-overlay">
@@ -368,6 +367,7 @@ footer {
   </div>
   <span class="folder-arrow">→</span>
 </a></div>
+</div>
 <div class="container">
   <div class="section-head"><h2>All Works</h2></div>
   <div class="filters"><button class="filter-pill active" data-filter="all">All</button><button class="filter-pill" data-filter="Available Works">Available Works</button><button class="filter-pill" data-filter="Barbados Era">Barbados Era</button></div>
