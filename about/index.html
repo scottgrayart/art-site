@@ -214,9 +214,17 @@ main { padding-top: var(--nav-h); }
 }
 @media (max-width: 960px) { .artwork-layout { grid-template-columns: 1fr; gap: 3rem; } }
 
-.artwork-image-wrap { position: sticky; top: calc(var(--nav-h) + 2rem); }
+.artwork-image-wrap {
+  position: sticky; top: calc(var(--nav-h) + 2rem);
+  /* Shrink to fit the image rather than stretching to fill the column */
+  display: inline-block; width: 100%;
+}
 .artwork-image-wrap img {
-  width: 100%; height: auto; display: block; cursor: zoom-in;
+  display: block; cursor: zoom-in;
+  /* Scale down to fit column width, cap height so specs stay visible */
+  max-width: 100%;
+  max-height: 65vh;
+  width: auto; height: auto;
   box-shadow: 0 8px 40px rgba(44,32,23,0.15), 0 2px 8px rgba(44,32,23,0.08);
 }
 
@@ -339,7 +347,7 @@ footer {
 <div class="container">
   <div class="about-layout">
     <h1>About</h1>
-    <div class="about-body"><p><img alt="" src="/images/about-logo.jpg" /></p>
+    <div class="about-body"><p><img src="/images/about-logo.jpg" alt="about-logo.jpg" width="700" style="max-width:100%"></p>
 <p>Art is an early passion that was set aside to raise a family and build a career in software. That career was driven by creativity and a need to keep learning — and those same instincts are what brought me back to making things.</p>
 <p>During COVID, I fell into watching fluid acrylic pour videos and haven't looked back. I've been experimenting with fluid acrylic techniques — working with the flow of paint rather than against it — to create abstract landscapes on panel. Each piece is partly planned and partly discovered in the making.</p>
 <hr />
